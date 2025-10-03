@@ -8,3 +8,6 @@ tasks:
   run-local:
     cmds:
       - go run cmd/sso/main.go --config={{ .LOCAL_CONFIG_PATH }}
+  stop:
+    cmds:
+      - kill -15 $(lsof -t -i :50051)
