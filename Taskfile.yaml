@@ -1,0 +1,10 @@
+version: '3'
+
+vars:
+  LOCAL_CONFIG_PATH: ./config/local.yaml
+
+
+tasks:
+  run-local:
+    cmds:
+      - go run cmd/sso/main.go --config={{ .LOCAL_CONFIG_PATH }}
